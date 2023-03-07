@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
 
 import pygame
 #import keys
@@ -40,7 +38,7 @@ pygame.init()
 screen = pygame.display.set_mode((screen_width,screen_height))
 pygame.display.set_caption('Spritesheets')
 #enter .jpeg name
-sprite_sheet_image = pygame.image.load('sprite name').conver_alpha()
+#sprite_sheet_image = pygame.image.load('sprite name').conver_alpha()
 
 
 player = Player()
