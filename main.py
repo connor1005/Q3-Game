@@ -3,6 +3,9 @@
 
 
 import pygame
+
+pygame.init()
+
 #import keys
 from pygame.locals import(
     K_UP,
@@ -33,10 +36,11 @@ class Player(pygame.sprite.Sprite):
         if pressed_keys[K_RIGHT]:
             self.rect.move_ip(5, 0)
 
-pygame.init()
-
 screen = pygame.display.set_mode((screen_width,screen_height))
-pygame.display.set_caption('Spritesheets')
+pygame.display.set_caption('Game')
+clock = pygame.time.Clock()
+
+
 #enter .jpeg name
 #sprite_sheet_image = pygame.image.load('sprite name').conver_alpha()
 
@@ -47,6 +51,11 @@ running = True
 #Main loop
 while running:
     
+    pygame.display.update()
+
+    clock.tick(60)
+
+    #quit event
     for event in pygame.event.get():
         if event.type == KEYDOWN:
             if event.key == K_ESCAPE:
